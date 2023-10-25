@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Tsk1</string>
+
+    <string name="home_fragment">HomeFragment</string>
+    <string name="services_fragment">ServicesFragment</string>
+
 </resources>
