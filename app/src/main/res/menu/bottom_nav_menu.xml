@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/home"
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
         android:title="Home"  />
     <item
-        android:id="@+id/message"
-        android:title="Message" />
+        android:id="@+id/menu_payment"
+        android:icon="@drawable/ic_payment"
+        android:title="ssd" />
     <item
-        android:id="@+id/settings"
-        android:title="Setting" />
+        android:id="@+id/menu_services"
+        android:icon="@drawable/ic_services"
+        android:title="finoofin skajbsioaj sisd dj siksdj ouas adj " />
+    <item
+        android:id="@+id/menu_statistics"
+        android:icon="@drawable/ic_statistics"
+        android:title="dms;ml" />
+    <item
+        android:id="@+id/menu_others"
+        android:icon="@drawable/ic_others"
+        android:title="mlds;ds" />
 </menu>

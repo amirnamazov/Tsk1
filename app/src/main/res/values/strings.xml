@@ -4,4 +4,7 @@
     <string name="home_fragment">HomeFragment</string>
     <string name="services_fragment">ServicesFragment</string>
 
+    <string name="home_page">Ana səhifə</string>
+    <string name="welcome">Xoş gəlmisən!</string>
+
 </resources>

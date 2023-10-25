@@ -2,7 +2,6 @@ package com.example.tsk1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import com.example.tsk1.databinding.ActivityMainBinding
 
@@ -17,14 +16,12 @@ class MainActivity : AppCompatActivity() {
         setInitialViews()
     }
 
-    private fun setInitialViews() {
-        setContentView(binding.root)
-        setSupportActionBar(binding.toolBarMain)
-        binding.title.text = "382969235483594835834759843754398573948347599999999999999"
-//        supportActionBar?.apply {
-//            title = "382969235483594835834759843754398573948347599999999999999"
-//            subtitle = "6666666666666666666666663333333333333"
-//        }
+    private fun setInitialViews() = binding.apply {
+        setContentView(root)
+        setSupportActionBar(toolBarMain)
+        this@MainActivity.title = null
+        title.text = resources.getText(R.string.home_page)
+        subtitle.text = resources.getText(R.string.welcome)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
