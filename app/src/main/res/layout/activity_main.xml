@@ -21,7 +21,7 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaybold"
+                android:maxLines="2"
                 android:textColor="@color/container_main"
                 android:textSize="20sp"/>
 
@@ -29,9 +29,9 @@
                 android:id="@+id/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/sfprodisplaybold"
+                android:maxLines="3"
                 android:textColor="@color/light_red"
-                android:textSize="20sp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 
@@ -47,22 +47,30 @@
         android:name="com.example.tsk1.HomeFragment"
         android:background="@drawable/frag_container_main"
         android:layout_below="@+id/tool_bar_main"
-        android:layout_above="@+id/bottomNav"
+        android:layout_above="@id/bottomNav"
         app:defaultNavHost="true"
         app:navGraph="@navigation/bottom_nav_graph" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/bg_bottom_nav_shadow"
+        android:layout_above="@id/bottomNav"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/bottom_nav_height"
         android:layout_alignParentBottom="true"
         android:background="@color/container_main"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemRippleColor="@null"
+        app:itemPaddingBottom="7dp"
+        app:itemPaddingTop="7dp"
         app:itemActiveIndicatorStyle="@null"
         app:itemBackground="@android:color/transparent"
-        app:itemTextColor="@color/bottom_nav_color"
         app:itemIconTint="@color/bottom_nav_color"
-        app:labelVisibilityMode="labeled"/>
+        app:itemRippleColor="@null"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>

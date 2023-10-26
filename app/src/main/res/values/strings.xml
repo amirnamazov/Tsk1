@@ -7,4 +7,10 @@
     <string name="home_page">Ana səhifə</string>
     <string name="welcome">Xoş gəlmisən!</string>
 
+    <string name="home">Əsas</string>
+    <string name="payment">Ödəmələr</string>
+    <string name="services">Xidmətlər</string>
+    <string name="statistics">Göstəricilər</string>
+    <string name="others">Daha çox</string>
+
 </resources>
