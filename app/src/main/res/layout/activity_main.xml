@@ -44,7 +44,7 @@
         android:clipToPadding="true"
         android:clipToOutline="true"
         android:clipChildren="true"
-        android:name="com.example.tsk1.HomeFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:background="@drawable/frag_container_main"
         android:layout_below="@+id/tool_bar_main"
         android:layout_above="@id/bottomNav"
