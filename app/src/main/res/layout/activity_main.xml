@@ -1,76 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <data>
+        <variable name="fragmentLabel" type="String"/>
+        <import type="android.view.View"/>
+    </data>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="2"
-                android:textColor="@color/container_main"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:maxLines="3"
-                android:textColor="@color/light_red"
-                android:textSize="18sp"/>
-
-        </LinearLayout>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/container"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="true"
-        android:clipToOutline="true"
-        android:clipChildren="true"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:background="@drawable/frag_container_main"
-        android:layout_below="@+id/tool_bar_main"
-        android:layout_above="@id/bottomNav"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/bottom_nav_graph" />
+        android:background="@color/background"
+        tools:context=".MainActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@drawable/bg_bottom_nav_shadow"
-        android:layout_above="@id/bottomNav"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bottom_nav_height"
-        android:layout_alignParentBottom="true"
-        android:background="@color/container_main"
-        app:itemPaddingBottom="7dp"
-        app:itemPaddingTop="7dp"
-        app:itemActiveIndicatorStyle="@null"
-        app:itemBackground="@android:color/transparent"
-        app:itemIconTint="@color/bottom_nav_color"
-        app:itemRippleColor="@null"
-        app:itemTextColor="@color/bottom_nav_color"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-</RelativeLayout>
+                <TextView
+                    android:text="@{fragmentLabel}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:textColor="@color/container_main"
+                    android:textSize="@{fragmentLabel == @string/home_page ? 60 : 85 }"/>
+
+                <TextView
+                    android:text="@string/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textColor="@color/light_red"
+                    android:visibility="@{fragmentLabel == @string/home_page ? View.VISIBLE : View.GONE }"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:clipToOutline="true"
+            android:clipChildren="true"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:background="@drawable/frag_container_main"
+            android:layout_below="@+id/tool_bar_main"
+            android:layout_above="@id/bottomNav"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/bottom_nav_graph" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/bg_bottom_nav_shadow"
+            android:layout_above="@id/bottomNav"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_nav_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/container_main"
+            app:itemPaddingBottom="7dp"
+            app:itemPaddingTop="7dp"
+            app:itemActiveIndicatorStyle="@null"
+            app:itemBackground="@android:color/transparent"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:itemRippleColor="@null"
+            app:itemTextColor="@color/bottom_nav_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </RelativeLayout>
+
+</layout>
+
+

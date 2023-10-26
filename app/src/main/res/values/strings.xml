@@ -3,12 +3,17 @@
 
     <string name="home_page">Ana səhifə</string>
     <string name="welcome">Xoş gəlmisən!</string>
+    <string name="payments">Ödənişlər</string>
+    <string name="other">Digər</string>
 
     <string name="home">Əsas</string>
     <string name="payment">Ödəmələr</string>
     <string name="services">Xidmətlər</string>
     <string name="statistics">Göstəricilər</string>
     <string name="others">Daha çox</string>
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
