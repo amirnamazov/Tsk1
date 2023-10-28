@@ -6,4 +6,6 @@
     <color name="container_main">#FFF0F4EF</color>
     <color name="light_red">#FFEA5455</color>
     <color name="light_gray">#FFE4DCCF</color>
+    <color name="light_blue">#2E71C1</color>
+    <color name="light_green">#A7DA9E</color>
 </resources>
