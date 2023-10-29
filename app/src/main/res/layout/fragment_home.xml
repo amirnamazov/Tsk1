@@ -124,35 +124,11 @@
                 tools:itemCount="1"
                 app:layout_constraintTop_toBottomOf="@id/btn_increase_balance"/>
 
-            <RelativeLayout
-                android:id="@+id/card_banner"
+            <include layout="@layout/card_view_banner"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:padding="10dp"
-                android:background="@drawable/bg_card_banner"
-                app:layout_constraintTop_toBottomOf="@+id/rv_banner">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:layout_toStartOf="@+id/img_gift"
-                    android:layout_centerInParent="true"
-                    android:text="Invite friends"
-                    android:textColor="@color/background"
-                    android:textSize="24sp"
-                    app:fontFamily="@font/sfprodisplaymedium" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_gift"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_gift"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerInParent="true"/>
-
-            </RelativeLayout>
+                app:layout_constraintTop_toBottomOf="@id/rv_banner"/>
             
         </androidx.constraintlayout.widget.ConstraintLayout>
 
