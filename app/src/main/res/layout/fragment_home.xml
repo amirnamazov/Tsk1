@@ -125,10 +125,32 @@
                 app:layout_constraintTop_toBottomOf="@id/btn_increase_balance"/>
 
             <include layout="@layout/card_view_banner"
+                android:id="@+id/ll_banner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 app:layout_constraintTop_toBottomOf="@id/rv_banner"/>
+
+            <TextView
+                android:id="@+id/tv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/x_b_rl_r"
+                android:textColor="@color/background"
+                android:textSize="28sp"
+                app:fontFamily="@font/sfprodisplaybold"
+                app:layout_constraintTop_toBottomOf="@id/ll_banner" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                tools:listitem="@layout/item_news"
+                tools:itemCount="1"
+                app:layout_constraintTop_toBottomOf="@id/tv_news"/>
             
         </androidx.constraintlayout.widget.ConstraintLayout>
 
