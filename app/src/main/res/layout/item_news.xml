@@ -23,8 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:imageResource="@{pair.first}"
-                android:foreground="@color/black_0.5"
-                app:srcCompat="@drawable/img_president"/>
+                android:foreground="@color/black_0.5"/>
 
             <TextView
                 android:layout_width="match_parent"
