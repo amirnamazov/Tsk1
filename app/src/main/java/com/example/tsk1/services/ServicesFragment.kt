@@ -2,9 +2,8 @@ package com.example.tsk1.services
 
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.example.tsk1.R
 import com.example.tsk1.base.BaseAdapter
@@ -23,8 +22,7 @@ class ServicesFragment : BaseFragment<FragmentServicesBinding>(R.layout.fragment
     }
 
     private fun RecyclerView.setupAdapter(adapter: BaseAdapter<out ViewBinding>) {
-        layoutManager = GridLayoutManager(requireContext(), 2,
-            GridLayoutManager.VERTICAL, false)
+        layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         this.adapter = adapter
     }
 }

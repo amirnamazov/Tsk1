@@ -9,31 +9,43 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp">
 
-        <LinearLayout
-            android:padding="20dp"
-            android:orientation="vertical"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:imageResource="@{triple.first}"
-                app:srcCompat="@drawable/ic_sheet"/>
-
-            <TextView
+            <View
+                android:alpha="0.4"
+                android:background="@{triple.second}"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:text="Əhali abonentinin enerji təchizatı şəbəkəsinə qoşulması"
-                android:textColor="@color/background" />
+                android:layout_height="match_parent"/>
 
-        </LinearLayout>
+            <LinearLayout
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:imageResource="@{triple.first}"
+                    app:srcCompat="@drawable/ic_sheet"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="@{triple.third}"
+                    android:textColor="@color/background" />
+
+            </LinearLayout>
+
+        </FrameLayout>
 
     </androidx.cardview.widget.CardView>
 

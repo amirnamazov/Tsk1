@@ -29,5 +29,10 @@
     <string name="x_b_rl_r">Xəbərlər</string>
     <string name="prezident_lham_liyev">Prezident İlham Əliyev Mingəçevir şəhərinin elektrik paylayıcı şəbəkəsinin Avtomatik İdarəetmə…</string>
     <string name="a_cab_dinin">Ağcabədinin Pərioğullar və Hacıbədəlli kəndlərinin elektrik şəbəkəsi yenidən qurulur.</string>
+    <string name="hali_abonentinin">Əhali abonentinin enerji təchizatı şəbəkəsinə qoşulması</string>
+    <string name="kalkulyatorlar">Kalkulyatorlar</string>
+    <string name="qo_ulma">Qoşulma Haqqının Onlayn Ödəlməsi</string>
+    <string name="borcun_ara">Borcun araşdırılması və borcun olmaması (və ya olması) barədə sənədin verilməsi</string>
+    <string name="abonentin">Abonentin geniş tarixçəsinin verilməsi</string>
 
 </resources>
