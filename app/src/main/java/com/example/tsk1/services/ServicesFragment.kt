@@ -2,27 +2,25 @@ package com.example.tsk1.services
 
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import androidx.viewbinding.ViewBinding
 import com.example.tsk1.R
-import com.example.tsk1.base.BaseAdapter
 import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentServicesBinding
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
-class ServicesFragment : BaseFragment<FragmentServicesBinding>(R.layout.fragment_services) {
+class ServicesFragment : BaseFragment<FragmentServicesBinding>(FragmentServicesBinding :: inflate) {
 
-    @Inject lateinit var servicesAdapter: ServicesAdapter
+    private val viewModel: ServiceViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        binding.rvServices.setupAdapter(servicesAdapter)
+        binding.rvServices.setupAdapter()
     }
 
-    private fun RecyclerView.setupAdapter(adapter: BaseAdapter<out ViewBinding>) {
+    private fun RecyclerView.setupAdapter() {
         layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        this.adapter = adapter
+        adapter = ServicesAdapter(viewModel.list)
     }
 }

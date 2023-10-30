@@ -3,11 +3,11 @@ package com.example.tsk1.base
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseAdapter<T : ViewBinding>(private val itemId: Int, private val listSize: Int) :
+abstract class BaseAdapter<T : ViewBinding>(
+    private val inflate: (LayoutInflater, ViewGroup, Boolean) -> T, private val listSize: Int) :
     RecyclerView.Adapter<BaseAdapter<T>.BaseViewHolder>() {
 
     protected val binding: T get() = _binding
@@ -16,7 +16,7 @@ abstract class BaseAdapter<T : ViewBinding>(private val itemId: Int, private val
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        _binding = DataBindingUtil.inflate(inflater, itemId, parent, false)
+        _binding = inflate.invoke(inflater, parent, false)
         return BaseViewHolder(_binding.root)
     }
 

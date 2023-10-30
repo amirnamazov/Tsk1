@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
+class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding :: inflate) {
 
     @Inject lateinit var newsAdapter: NewsAdapter
     @Inject lateinit var bannerAdapter: BannerAdapter
