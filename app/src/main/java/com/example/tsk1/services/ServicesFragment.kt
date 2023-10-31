@@ -9,19 +9,24 @@ import androidx.palette.graphics.Palette
 import com.example.tsk1.R
 import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentServicesBinding
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.tsk1.databinding.ItemServicesBinding
+import com.example.tsk1.util.CustomAdapter
 
-@AndroidEntryPoint
 class ServicesFragment : BaseFragment<FragmentServicesBinding>(FragmentServicesBinding :: inflate) {
 
     private val viewModel: ServiceViewModel by viewModels()
-    private val servicesAdapter by lazy { ServicesAdapter(listServices) }
+
+    private val servicesAdapter by lazy {
+        CustomAdapter(ItemServicesBinding :: inflate, listServices.size) { i, p ->
+            i.triple = listServices[p]
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.rvServices.adapter = servicesAdapter
     }
 
-    private val listServices: List<ServiceItem> by lazy {
+    private val listServices: List<Triple<Int, Int, String>> by lazy {
         viewModel.list.map { getTriple(it.first, it.second) }
     }
 

@@ -2,11 +2,8 @@ package com.example.tsk1.services
 
 import androidx.lifecycle.ViewModel
 import com.example.tsk1.R
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 
-@HiltViewModel
-class ServiceViewModel @Inject constructor() : ViewModel() {
+class ServiceViewModel : ViewModel() {
 
     val list: List<Pair<Int, Int>> = listOf(
         Pair(R.drawable.ic_bag, R.string.qo_ulma),

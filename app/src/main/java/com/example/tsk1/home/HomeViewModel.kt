@@ -2,11 +2,8 @@ package com.example.tsk1.home
 
 import androidx.lifecycle.ViewModel
 import com.example.tsk1.R
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 
-@HiltViewModel
-class HomeViewModel @Inject constructor() : ViewModel() {
+class HomeViewModel: ViewModel() {
 
     val listBanner: List<Triple<Int, Int, Int>> = listOf(
         Triple(R.string.ortalama_enerji_stehlak, R.color.light_green, R.drawable.ic_banner_1),
