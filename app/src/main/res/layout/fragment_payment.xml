@@ -5,6 +5,7 @@
     tools:context=".payment.PaymentFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_pay_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
