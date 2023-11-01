@@ -24,10 +24,11 @@ class StatisticsFragment :
         CustomViewPagerAdapter(this, listFrag.mapIndexed { index, fragment ->
             fragment.apply {
                 arguments = Bundle().apply {
-                    val graphArray = viewModel.list[index].second.map {
+                    val graphArray = viewModel.list[index].third.map {
                         getGraph(it.first, it.second)
                     }.toTypedArray()
 
+                    putString(TITLE_ID, viewModel.list[index].second)
                     putParcelableArray(LIST_ID, graphArray)
                 }
             }
@@ -59,6 +60,7 @@ class StatisticsFragment :
     }
 
     companion object {
+        const val TITLE_ID = "TITLE_ID"
         const val LIST_ID = "LIST_ID"
     }
 }

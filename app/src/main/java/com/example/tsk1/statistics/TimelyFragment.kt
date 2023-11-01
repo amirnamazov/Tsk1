@@ -7,9 +7,14 @@ import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentTimelyBinding
 import com.example.tsk1.databinding.ItemStatisticsBinding
 import com.example.tsk1.model.Graph
+import com.example.tsk1.statistics.StatisticsFragment.Companion.TITLE_ID
 import com.example.tsk1.util.CustomAdapter
 
 class TimelyFragment : BaseFragment<FragmentTimelyBinding>(FragmentTimelyBinding::inflate) {
+
+    private val title by lazy {
+        requireArguments().getString(TITLE_ID)
+    }
 
     private val listGraph by lazy {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -26,6 +31,7 @@ class TimelyFragment : BaseFragment<FragmentTimelyBinding>(FragmentTimelyBinding
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.title.text = title
         binding.rvYearly.adapter = adapter
     }
 }
