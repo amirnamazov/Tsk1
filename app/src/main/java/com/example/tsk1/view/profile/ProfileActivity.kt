@@ -6,8 +6,12 @@ import com.example.tsk1.databinding.ActivityProfileBinding
 class ProfileActivity : BaseActivity<ActivityProfileBinding>(ActivityProfileBinding::inflate) {
 
     override fun initializeViews() {
-        binding.apply {
+        setSupportActionBar(binding.toolBarMain)
+        title = null
+    }
 
-        }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return true
     }
 }

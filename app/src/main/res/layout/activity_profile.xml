@@ -11,6 +11,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar_main"
         app:navigationIcon="?attr/homeAsUpIndicator"
+        android:theme="@style/ToolbarColoredBackArrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

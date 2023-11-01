@@ -14,7 +14,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
     override fun initializeViews() {
         setSupportActionBar(binding.toolBarMain)
-        this@MainActivity.title = null
+        title = null
         setBottomNavigation()
     }
 
