@@ -1,4 +1,4 @@
-package com.example.tsk1.services
+package com.example.tsk1.view.services
 
 import android.os.Bundle
 import android.view.View
@@ -11,6 +11,7 @@ import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentServicesBinding
 import com.example.tsk1.databinding.ItemServicesBinding
 import com.example.tsk1.util.CustomAdapter
+import com.example.tsk1.viewmodel.ServiceViewModel
 
 class ServicesFragment : BaseFragment<FragmentServicesBinding>(FragmentServicesBinding :: inflate) {
 

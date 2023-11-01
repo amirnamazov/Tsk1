@@ -1,4 +1,4 @@
-package com.example.tsk1.payment
+package com.example.tsk1.view.payment
 
 import android.os.Bundle
 import android.text.Spannable
@@ -12,6 +12,7 @@ import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentPaymentBinding
 import com.example.tsk1.databinding.ItemPaymentBinding
 import com.example.tsk1.util.CustomAdapter
+import com.example.tsk1.viewmodel.PaymentViewModel
 
 class PaymentFragment : BaseFragment<FragmentPaymentBinding>(FragmentPaymentBinding :: inflate) {
 

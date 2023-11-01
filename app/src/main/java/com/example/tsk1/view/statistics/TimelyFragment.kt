@@ -1,4 +1,4 @@
-package com.example.tsk1.statistics
+package com.example.tsk1.view.statistics
 
 import android.os.Build
 import android.os.Bundle
@@ -7,7 +7,7 @@ import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentTimelyBinding
 import com.example.tsk1.databinding.ItemStatisticsBinding
 import com.example.tsk1.model.Graph
-import com.example.tsk1.statistics.StatisticsFragment.Companion.TITLE_ID
+import com.example.tsk1.view.statistics.StatisticsFragment.Companion.TITLE_ID
 import com.example.tsk1.util.CustomAdapter
 
 class TimelyFragment : BaseFragment<FragmentTimelyBinding>(FragmentTimelyBinding::inflate) {

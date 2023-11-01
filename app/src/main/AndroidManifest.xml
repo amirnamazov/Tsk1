@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".BaseApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,12 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tsk1"
-        android:name=".BaseApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".view.profile.ProfileActivity"
             android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-package com.example.tsk1.home
+package com.example.tsk1.view.home
 
 import android.os.Bundle
 import android.view.View
@@ -8,6 +8,7 @@ import com.example.tsk1.databinding.FragmentHomeBinding
 import com.example.tsk1.databinding.ItemBannerBinding
 import com.example.tsk1.databinding.ItemNewsBinding
 import com.example.tsk1.util.CustomAdapter
+import com.example.tsk1.viewmodel.HomeViewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding :: inflate) {
 

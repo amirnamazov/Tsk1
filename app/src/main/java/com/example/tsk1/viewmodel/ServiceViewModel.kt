@@ -1,4 +1,4 @@
-package com.example.tsk1.services
+package com.example.tsk1.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.tsk1.R

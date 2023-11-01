@@ -1,4 +1,4 @@
-package com.example.tsk1.others
+package com.example.tsk1.view.others
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,7 @@ import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentOthersBinding
 import com.example.tsk1.databinding.ItemOtherBinding
 import com.example.tsk1.util.CustomAdapter
+import com.example.tsk1.viewmodel.OthersViewModel
 
 class OthersFragment : BaseFragment<FragmentOthersBinding>(FragmentOthersBinding::inflate) {
 

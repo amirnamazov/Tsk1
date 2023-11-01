@@ -12,9 +12,6 @@
     <string name="statistics">Göstəricilər</string>
     <string name="others">Daha çox</string>
 
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ortalama_enerji_stehlak">Ortalama enerji İstehlakı</string>
     <string name="add_auto_top_up">Add auto Top-Up</string>
     <string name="enerjiy_q_na_t_m_sl_h_tl_ri">Enerjiyə qənaət məsləhətləri</string>

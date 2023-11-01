@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".payment.PaymentFragment">
+    tools:context=".view.payment.PaymentFragment">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsv_pay_fragment"

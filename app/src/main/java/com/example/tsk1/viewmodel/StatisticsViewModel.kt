@@ -1,4 +1,4 @@
-package com.example.tsk1.statistics
+package com.example.tsk1.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.tsk1.R

@@ -8,4 +8,4 @@
     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
     tools:itemCount="3"
     tools:listitem="@layout/item_other"
-    tools:context=".others.OthersFragment"/>
+    tools:context=".view.others.OthersFragment"/>

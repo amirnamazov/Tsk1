@@ -1,4 +1,4 @@
-package com.example.tsk1.payment
+package com.example.tsk1.viewmodel
 
 import androidx.lifecycle.ViewModel
 

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:paddingHorizontal="20dp"
     android:paddingBottom="20dp"
-    tools:context=".statistics.TimelyFragment">
+    tools:context=".view.statistics.TimelyFragment">
 
     <TextView
         android:id="@+id/title"

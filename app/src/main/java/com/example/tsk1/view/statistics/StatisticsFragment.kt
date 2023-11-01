@@ -1,4 +1,4 @@
-package com.example.tsk1.statistics
+package com.example.tsk1.view.statistics
 
 import android.os.Bundle
 import android.view.View
@@ -11,6 +11,7 @@ import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentStatisticsBinding
 import com.example.tsk1.model.Graph
 import com.example.tsk1.util.CustomViewPagerAdapter
+import com.example.tsk1.viewmodel.StatisticsViewModel
 import com.google.android.material.tabs.TabLayoutMediator
 
 class StatisticsFragment :
