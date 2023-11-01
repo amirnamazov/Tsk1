@@ -2,9 +2,14 @@ package com.example.tsk1.statistics
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.viewModels
+import androidx.palette.graphics.Palette
+import com.example.tsk1.R
 import com.example.tsk1.base.BaseFragment
 import com.example.tsk1.databinding.FragmentStatisticsBinding
+import com.example.tsk1.model.Graph
 import com.example.tsk1.util.CustomViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -19,7 +24,11 @@ class StatisticsFragment :
         CustomViewPagerAdapter(this, listFrag.mapIndexed { index, fragment ->
             fragment.apply {
                 arguments = Bundle().apply {
-                    putParcelableArray(LIST_ID, viewModel.list[index].second.toTypedArray())
+                    val graphArray = viewModel.list[index].second.map {
+                        getGraph(it.first, it.second)
+                    }.toTypedArray()
+
+                    putParcelableArray(LIST_ID, graphArray)
                 }
             }
         })
@@ -39,6 +48,14 @@ class StatisticsFragment :
     override fun onDestroyView() {
         super.onDestroyView()
         tabLayoutMediator.detach()
+    }
+
+    private fun getGraph(drawableId: Int, title: String): Graph {
+        val dominantColor = ContextCompat.getColor(requireContext(), R.color.light_green)
+        val bitmap = ContextCompat.getDrawable(requireContext(), drawableId)!!.toBitmap()
+        val color = Palette.from(bitmap).generate().getDominantColor(dominantColor)
+
+        return Graph(drawableId, title, color)
     }
 
     companion object {

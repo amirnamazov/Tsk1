@@ -19,10 +19,13 @@ class TimelyFragment : BaseFragment<FragmentTimelyBinding>(FragmentTimelyBinding
         } as Array<Graph>
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    private val adapter by lazy {
+        CustomAdapter(ItemStatisticsBinding::inflate, listGraph.size) { i, p ->
+            i.graph = listGraph[p]
+        }
+    }
 
-        binding.rvYearly.adapter = CustomAdapter(
-            ItemStatisticsBinding::inflate, listGraph.size
-        ) { i, p -> i.graph = listGraph[p] }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.rvYearly.adapter = adapter
     }
 }

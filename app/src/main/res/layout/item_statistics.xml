@@ -14,14 +14,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{graph.title}"
-            android:layout_marginBottom="10dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@color/background" />
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{graph.title}"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@{graph.colorId}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  kW/h"
+                android:textStyle="bold"
+                android:textColor="@color/background" />
+
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
