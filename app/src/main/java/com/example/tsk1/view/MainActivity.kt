@@ -1,28 +1,19 @@
 package com.example.tsk1.view
 
 import android.content.Intent
-import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.tsk1.R
+import com.example.tsk1.base.BaseActivity
 import com.example.tsk1.databinding.ActivityMainBinding
 import com.example.tsk1.view.profile.ProfileActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
-    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setInitialViews()
-    }
-
-    private fun setInitialViews() = binding.apply {
-        setContentView(root)
-        setSupportActionBar(toolBarMain)
+    override fun initializeViews() {
+        setSupportActionBar(binding.toolBarMain)
         this@MainActivity.title = null
         setBottomNavigation()
     }
